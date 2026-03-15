@@ -6,7 +6,7 @@ class Solution(object):
         """
         result = []
         for token in tokens:
-            if token not in ['+', '-', '*', '/']:
+            if token[-1].isdigit():
                 result.append(int(token))
             else:
                 b = result.pop()
@@ -17,6 +17,6 @@ class Solution(object):
                     result.append(a - b)
                 elif token == '*':
                     result.append(a * b)
-                elif token == '/':
+                else:
                     result.append(int(float(a) / b))
-        return result[0]
+        return  result[0]
