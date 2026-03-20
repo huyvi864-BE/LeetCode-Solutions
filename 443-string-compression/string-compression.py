@@ -4,21 +4,21 @@ class Solution(object):
         :type chars: List[str]
         :rtype: int
         """
-        write = 0
-        read = 0 
-        n = len(chars)
-        while read < n:
-            current_char = chars[read]
-            count = 0
-            while read < n and chars[read] == current_char:
-                read += 1
+        if not chars: return 0
+        res = ""
+        count = 1
+        for i in range(1, len(chars)):
+            if chars[i] == chars[i-1]:
                 count += 1
-            chars[write] = current_char
-            write += 1
-            if count > 1:
-                for digit in str(count):
-                    chars[write] = digit
-                    write += 1
-
-        # Mảng chars từ vị trí 0 đến write - 1 đã chứa chuỗi nén
-        return write
+            else:
+                res += chars[i-1]
+                if count > 1:
+                    res += str(count)
+                count = 1 
+        res += chars[-1]
+        if count > 1:
+            res += str(count)
+        for i in range(len(res)):
+            chars[i] = res[i]
+            
+        return len(res)
