@@ -65,4 +65,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
+## Database
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0181-employees-earning-more-than-their-managers](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/0181-employees-earning-more-than-their-managers/) | Easy |
 <!---LeetCode Topics End-->
