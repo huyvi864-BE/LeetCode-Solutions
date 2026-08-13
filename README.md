@@ -60,6 +60,7 @@
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/2130-maximum-twin-sum-of-a-linked-list/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -73,4 +74,12 @@
 | [0586-customer-placing-the-largest-number-of-orders](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/0586-customer-placing-the-largest-number-of-orders/) | Easy |
 | [0596-classes-with-at-least-5-students](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/0596-classes-with-at-least-5-students/) | Easy |
 | [0620-not-boring-movies](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/0620-not-boring-movies/) | Easy |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
 <!---LeetCode Topics End-->
