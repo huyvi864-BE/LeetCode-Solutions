@@ -78,6 +78,7 @@
 |  |
 | ------- |
 | [0136-single-number](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0136-single-number) |
+| [0215-kth-largest-element-in-an-array](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0215-kth-largest-element-in-an-array) |
 | [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
 ## Monotonic Stack
 |  |
@@ -87,4 +88,20 @@
 |  |
 | ------- |
 | [0136-single-number](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0136-single-number) |
+## Divide and Conquer
+|  |
+| ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0215-kth-largest-element-in-an-array) |
+## Sorting
+|  |
+| ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0215-kth-largest-element-in-an-array) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0215-kth-largest-element-in-an-array) |
+## Quickselect
+|  |
+| ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0215-kth-largest-element-in-an-array) |
 <!---LeetCode Topics End-->
