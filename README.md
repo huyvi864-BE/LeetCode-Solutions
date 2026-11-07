@@ -104,4 +104,8 @@
 |  |
 | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0215-kth-largest-element-in-an-array) |
+## Math
+|  |
+| ------- |
+| [0009-palindrome-number](https://github.com/huyvi864-BE/LeetCode-Solutions/tree/master/0009-palindrome-number) |
 <!---LeetCode Topics End-->
