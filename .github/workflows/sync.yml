@@ -1,0 +1,81 @@
+name: Auto Split LeetHub Solutions
+
+on:
+  push:
+    branches:
+      - main # Đổi thành master nếu repo LeetHub-Sync của bạn dùng nhánh master
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Repo
+        uses: actions/checkout@v4
+        with:
+          path: source_repo
+
+      - name: Checkout Python Repo
+        uses: actions/checkout@v4
+        with:
+          repository: huyvi864-BE/Leetcode-Python
+          token: ${{ secrets.GH_PAT }}
+          path: python_repo
+
+      - name: Checkout SQL Repo
+        uses: actions/checkout@v4
+        with:
+          repository: huyvi864-BE/Leetcode-SQL
+          token: ${{ secrets.GH_PAT }}
+          path: sql_repo
+
+      - name: Phân loại và Copy Code
+        run: |
+          cd source_repo
+          # Lặp qua tất cả các thư mục bài toán LeetHub tạo ra
+          for dir in */; do
+            if [ -d "$dir" ]; then
+              
+              # 1. Nếu tìm thấy file Python (.py)
+              if ls "$dir"*.py 1> /dev/null 2>&1; then
+                mkdir -p "../python_repo/$dir"
+                cp "$dir"*.py "../python_repo/$dir"
+                # Copy luôn đề bài (README.md) nếu có
+                [ -f "${dir}README.md" ] && cp "${dir}README.md" "../python_repo/$dir"
+              fi
+              
+              # 2. Nếu tìm thấy file SQL (.sql)
+              if ls "$dir"*.sql 1> /dev/null 2>&1; then
+                mkdir -p "../sql_repo/$dir"
+                cp "$dir"*.sql "../sql_repo/$dir"
+                [ -f "${dir}README.md" ] && cp "${dir}README.md" "../sql_repo/$dir"
+              fi
+              
+            fi
+          done
+
+      - name: Push sang Python Repo
+        run: |
+          cd python_repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          # Chỉ commit & push nếu thực sự có file mới được thêm vào
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Auto-sync Python solution từ LeetHub"
+            git push
+          else
+            echo "Không có code Python mới"
+          fi
+
+      - name: Push sang SQL Repo
+        run: |
+          cd sql_repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Auto-sync SQL solution từ LeetHub"
+            git push
+          else
+            echo "Không có code SQL mới"
+          fi
