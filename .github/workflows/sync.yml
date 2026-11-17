@@ -5,6 +5,10 @@ on:
     branches:
       - main # Đổi thành master nếu repo LeetHub-Sync của bạn dùng nhánh master
 
+concurrency:
+  group: sync-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
