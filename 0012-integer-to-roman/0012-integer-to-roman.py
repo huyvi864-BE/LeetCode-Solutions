@@ -5,8 +5,7 @@ class Solution:
         ]
         res = []
         for val, symbol in roman:
-            if num ==0:
-                break
-            count, num = divmod(num, val)
-            res.append(symbol *count)
-        return ''.join(res)
+            while num >= val:
+                res.append(symbol)
+                num -= val
+        return "".join(res)
